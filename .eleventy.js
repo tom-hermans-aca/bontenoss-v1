@@ -31,15 +31,16 @@ module.exports = function (eleventyConfig) {
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
-    "./_tmp/static/css/style.css": "./static/css/style.css",
-    "./src/admin/config.yml": "./admin/config.yml",
-    "./node_modules/alpinejs/dist/alpine.js": "./static/js/alpine.js",
-    "./node_modules/prismjs/themes/prism-tomorrow.css":
-      "./static/css/prism-tomorrow.css",
-  });
+		'./_tmp/static/css/style.css': './static/css/style.css',
+		'./src/admin/config.yml': './admin/config.yml',
+		'./node_modules/alpinejs/dist/alpine.js': './static/js/alpine.js',
+		'./node_modules/prismjs/themes/prism-tomorrow.css':
+			'./static/css/prism-tomorrow.css',
+	});
 
   // Copy Image Folder to /_site
   eleventyConfig.addPassthroughCopy("./src/static/img");
+  eleventyConfig.addPassthroughCopy('./src/static/fonts');
 
   // Copy favicon to route of /_site
   eleventyConfig.addPassthroughCopy("./src/favicon.ico");
