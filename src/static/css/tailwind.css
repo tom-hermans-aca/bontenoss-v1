@@ -129,3 +129,8 @@ body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
   @apply bg-gray-800;
 } */
+
+.flex-9999 {
+  flex-grow: 9999;
+  flex-basis: 7em;
+}
