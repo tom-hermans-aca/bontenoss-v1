@@ -4,8 +4,8 @@ items:
     url: "#"
   - text: Menu Two
     url: "#"
-  - text: Menu Three
-    url: "#"
+  - text: ds
+    url: "/ds"
   - text: Blog
     url: "/blog"
   - text: Contact
