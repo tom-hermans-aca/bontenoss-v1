@@ -2,6 +2,7 @@ const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
+const svgContents = require("eleventy-plugin-svg-contents");
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -19,6 +20,9 @@ module.exports = function (eleventyConfig) {
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // plugin to grab the contents of an SVG file to allow for embedding in your template with all the power of SVG. https://github.com/brob/eleventy-plugin-svg-contents
+  eleventyConfig.addPlugin(svgContents);
 
   // To Support .yaml Extension in _data
   // You may remove this if you can use JSON
