@@ -1,5 +1,5 @@
 ---
-title: some title for new post
+title: edited title for new blog post
 description: new description about this post
 author: Tom
 date: 2021-02-18T13:02:54.764Z

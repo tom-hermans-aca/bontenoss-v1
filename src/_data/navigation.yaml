@@ -1,9 +1,9 @@
 ---
 items:
-  - text: Menu One
-    url: "#"
-  - text: Menu Two
-    url: "#"
+  - text: Corona
+    url: "#corona"
+  - text: Artsen
+    url: "#doctors"
   - text: ds
     url: "/ds"
   - text: Blog
