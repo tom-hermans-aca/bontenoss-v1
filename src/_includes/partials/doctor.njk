@@ -8,9 +8,9 @@
     <h2 class="pt-3 text-2xl font-semibold flex-9999">{{ doctor.data.name }}</h2>
   </div>
   <div class="p-4 leading-5 text-gray-800 sm:ml-20 sm:pr-8">
-    <small>{{ doctor.data.date }}</small>
+    <small>{{ doctor.data.date | readableDate }}</small>
     <p>
-      {{ doctor.data.content | safe }}
+      {{ doctor.data.desc | safe }}
     </p>
     
   </div>

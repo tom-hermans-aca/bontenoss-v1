@@ -18,6 +18,11 @@ module.exports = function (eleventyConfig) {
     );
   });
 
+  //machine readable date
+  eleventyConfig.addFilter("machineDate", dateObj => {
+    return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
+  });
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -67,6 +72,8 @@ module.exports = function (eleventyConfig) {
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {
+    pathPrefix: '/',
+
     dir: {
       input: "src",
     },

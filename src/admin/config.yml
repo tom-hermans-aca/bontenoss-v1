@@ -30,8 +30,9 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
+
   # Our Doctors
-  - name: "doctors"
+  - name: "doctor"
     label: "Doctor"
     folder: "src/doctors"
     create: true # Change to true to allow editors to create new doctors
@@ -41,26 +42,30 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Image", name: "thumbnail", widget: "image", required: false }
       - { label: "Description", name: "desc", widget: "markdown", required: false }
-      - { label: "Image", name: "thumbnail", widget: "image" }
+
   # Our pages e.g. About
-  - name: "pages"
-    label: "Page"
+  - label: "Pages"
+    name: "page"
     folder: "src/pages"
-    create: true # Change to true to allow editors to create new pages
-    slug: "{{slug}}"
+    create: true
+    editor:
+      preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Author", name: "author", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Permalink", name: "permalink", widget: "string" }
-      # - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
-      #   name: "eleventyNavigation"
-      #   widget: "object"
-      #   fields:
-      #     - { label: "Key", name: "key", widget: "string" }
-      #     - { label: "Order", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Image", name: "thumbnail", widget: "image", required: false  }  
+      - widget: select
+        label: "tags"
+        name: "tags"
+        multiple: true
+        required: false
+        create: true
+        options: ["Tags", "created", "from", "config.yml"]
+
   - label: "Settings"
     name: "settings"
     editor:

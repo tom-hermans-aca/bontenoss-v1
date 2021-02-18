@@ -1,3 +1,6 @@
 {
-  "layout": "page.njk"
+  "layout": "pages.njk",
+  "tags": [
+      "page"
+  ]
 }
