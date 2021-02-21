@@ -14,6 +14,10 @@ module.exports = {
       // ...colors,
     // },
     extend: {
+      fontFamily: {
+        'base': 'var(--headingfont)',
+        'heading': 'var(--headingfont)',
+      },
       colors: {
         'blue': {
           '50': '#f2f9fc',

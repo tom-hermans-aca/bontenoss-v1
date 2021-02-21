@@ -5,6 +5,7 @@ description: Capitalize on low hanging fruit to identify a ballpark value added
   clickthroughs from DevOps.
 author: Tom Hermans
 date: 2020-09-01
+link: https://codewithhugo.com/eleventy-collections-yaml-alpinejs/
 tags:
   - left
   - center

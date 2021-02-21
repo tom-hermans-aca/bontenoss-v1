@@ -1,98 +1,75 @@
 ---
 layout: default
-title: Neat Starter
+title: Gynaecologiepraktijk OBGYN
 path: home
 ---
 
 <!-- <div class="container flex flex-col items-center justify-center mx-auto lg:h-screen"> -->
-<div class="container mx-auto"></div>
-<h1>
-	<em
-		class="text-transparent bg-clip-text bg-gradient-to-l from-gold-800 to-yellow-400"
-	>
-		Hero</em
-	>
-	<br />
-	<strong
-		class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-red-600"
-	>
-		{{title}}
-	</strong>
-</h1>
-
+<div class="py-8 mx-auto bg-blue-300">
+	<div class="container px-8">
+		<h1>
+			<strong
+				class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600"
+			>
+				{{title}}
+			</strong>
+		</h1>
+	</div>
+</div>
 <!-- {% include "./_includes/partials/corona.njk" %} -->
 
-<div class="bg-blue-200">
+{% include './_includes/partials/cta-contact.njk' %}
+
+{% include './_includes/partials/corona_short.njk' %}
+
+
+<div class="from-blue-100 to-blue-300 bg-gradient-to-b">
 	<section id="doctors" class="py-10 mx-auto">
-		<h1 class="w-full max-w-6xl mx-auto text-center">Artsen</h1>
-    <div class="p-4 mx-auto">
-      <ul class="grid grid-cols-1 gap-5 mt-12 max-w-7xl sm:gap-6 lg:grid-cols-3">
-        
-        {% for doctor in collections.doctor %}
-          {% include "./_includes/partials/doctor.njk" %}
-        {% endfor %}
-      </ul>
-    </div>
+		<h1 class="w-full max-w-6xl mx-auto font-bold text-center text-dblue-500">
+			Artsen
+		</h1>
+		<div class="p-4 mx-auto">
+			<!-- <ul class="grid grid-cols-1 gap-5 mt-12 max-w-7xl sm:gap-6 lg:grid-cols-3"> -->
+			<ul>
+				{% for doctor in collections.doctor %} {% include
+				"./_includes/partials/doctor.njk" %} {% endfor %}
+			</ul>
+		</div>
 	</section>
 </div>
 
+<div class="bg-metal-300">
+	<section id="doctors" class="max-w-5xl py-10 mx-auto">
+		<h1 class="text-center text-gold-600">Patiënteninfo</h1>
+
+		<h2 class="text-center text-gold-600">Het ziekenhuis</h2>
+		<p>
+			Hier vindt U meer informatie vinden over uw
+			<strong>zwangerschap</strong> en <strong>bevallen</strong>.
+		</p>
+
+		<p>
+			Zwangerschap en bevalling in ons ziekenhuis:
+			<a
+				href="https://www.gzaziekenhuizen.be/specialismen/verloskunde/verloskunde/materniteit-sint-augustinus"
+				>informatie ziekenhuis Materniteit campus Sint-Augustinus | GZA
+				Ziekenhuizen</a
+			>
+		</p>
+		<h2 class="text-center text-gold-600">Zwangerschap</h2>
+
+		<h2 class="text-center text-gold-600">
+			Gynaecologie - Menopauze - Fertiliteit
+		</h2>
+	</section>
+</div>
+<!-- 
 <div class="bg-red-400">
 	<section id="doctors" class="max-w-5xl py-10 mx-auto">
 		<h1>Hero</h1>
 	</section>
-</div>
+</div> -->
 
-<div class="bg-red-400">
-	<section id="doctors" class="max-w-5xl py-10 mx-auto">
-		<h1>Hero</h1>
-	</section>
-</div>
-
-
-<div class="border border-dblue-800">
-  <h3 class="text-2xl text-red-400">Pages</h3>
-  {% set pageslist = collections.page %} 
-  {% for page in pageslist %}
-  page:
-  <a href="{{ page.url | url }}">
-    {{ page.data.title }}</a> <br />
-    {{ page.content }}
-  {% endfor %}
-</div>
-
-<section class="bg-blue-300 mt-15">
-	<div class="container">
-		<h1 class="my-8">Patienteninfo</h1>
-		{% set postslist = collections.post %} {% for post in postslist | reverse %}
-		<article class="my-8">
-			<h2 class="mb-2 text-3xl font-bold text-gray-900">
-				<a href="{{ post.url | url }}">
-					{% if post.data.title %} {{ post.data.title }} {% else %} Untitled {%
-					endif %}
-				</a>
-			</h2>
-			<p class="mb-3 text-base leading-6 text-gray-500">
-				<time>
-					{{ post.date | readableDate }} by
-					<a>{{ post.data.author }}</a>
-				</time>
-			</p>
-			{% if post.data.description %}
-			<p class="mb-3 text-lg text-gray-500">{{ post.data.description }}</p>
-			{% endif %}
-
-			<p>
-				<a
-					href="{{ post.url | url }}"
-					class="text-lg font-bold text-indigo-500"
-				>
-					Read more →
-				</a>
-			</p>
-		</article>
-		{% endfor %}
-	</div>
-</section>
-
-{% include './_includes/partials/mrk.njk' %} 
-{% include "./_includes/partials/content.html" %}
+{% include './_includes/partials/moreinfo.njk' %} {% include
+'./_includes/partials/mrk.njk' %} {% include "./_includes/partials/content.html"
+%}

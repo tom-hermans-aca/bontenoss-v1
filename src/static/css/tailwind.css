@@ -17,15 +17,23 @@
       url('../fonts/Atkinson-Hyperlegible/webfonts/WOFF/Atkinson-Hyperlegible-Regular-102a.woff') format("woff");
     /* unicode-range: U+20-7E,U+2122; */
   }
+  @font-face {
+    font-family: "FiraCode";
+    src: url('../fonts/FiraCode/FiraCode-VF-subset.woff2') format("woff2"), 
+      url('../fonts/FiraCode/FiraCode-VF-subset.woff') format("woff");
+    /* unicode-range: U+20-7E,U+2122; */
+  }
 /* } */
 :root {
   --outline: 1px dotted rgba(0,250,0,.3);
+  --outline: '';
   --basefont: 'Atkinson';
-  --headingfont: 'WorkSans';
+  --headingfont: 'Basier Circle'; /*'WorkSans';*/
+  /* --headingfont: 'FiraCode'; */
   --wght:300; --wdth:90; --lh:1.4; --ls:0px; --ital:0; --vf-font-size:24px;
   font-variation-settings: 'wght' var(--wght), 'wdth' var(--wdth),'slnt' var(--slnt), 'ital' var(--ital), 'GRAD' var(--grad);
   --lh: 1.2;
-  --flow-space: 2em;
+  --flow-space: 1em;
 }
 
 * {
@@ -43,21 +51,18 @@ body {
 
 
 h1, h2, h3, h4, h5, h6 {
-  /* font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
-    helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-   */
   font-family: var(--headingfont), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.05;
   font-weight: 568;
-  margin: 1.2rem 0;
+  margin: 1rem 0;
 }
 
 h1, h2, h3, h4, h5,
-p {
+p, address {
   font-size: clamp(
     var(--fluid-type-min, 1rem),
-    calc(1rem + var(--fluid-type-target, 3vw)),
-    var(--fluid-type-max, 1.3rem)
+    calc(1rem + var(--fluid-type-target, 2.3vw)),
+    var(--fluid-type-max, 1.2rem)
   );
 }
 
@@ -65,7 +70,7 @@ h1 {
   --fluid-type-min: 2.5rem;
   --fluid-type-max: 5rem;
   --fluid-type-target: 5vw;
-  max-width: 15ch;
+  /* max-width: 15ch; */
 }
 
 h2 {
@@ -92,16 +97,21 @@ h5 {
 
 h2,
 h3 {
-  max-width: 30ch;
+  /* max-width: 30ch; */
 }
 
-p {
-  max-width: 60ch;
+p, address {
+  --fluid-type-min: .9rem;
+  --fluid-type-max: 1.2rem;
+  /* max-width: 60ch; */
   line-height: 1.5;
 }
 
 a {
-  @apply text-blue-500 underline hover:text-blue-600;
+  @apply text-blue-500 underline cursor-pointer hover:text-blue-600;
+}
+.bg-yellow-400 a {
+  @apply text-dblue-800;
 }
 
 .flow > * + * { 
@@ -133,4 +143,54 @@ body pre[class*="language-"] {
 .flex-9999 {
   flex-grow: 9999;
   flex-basis: 7em;
+}
+
+.selectfont {
+  background: green;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: right;
+  padding: 5px;
+}
+.selectfont option {
+  padding: 4px;
+}
+
+.css-1lsqsgf svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* tables */
+.table {
+    @apply w-full min-w-full p-8 divide-y rounded divide-metal-400 bg-metal-200;
+    font-variant-numeric: lining-nums tabular-nums;
+    border-collapse: collapse;
+    /* border: 1px solid; */
+    /* border-color: #4299e1; */
+}
+.table tbody tr:nth-child(odd){
+  @apply bg-metal-100;
+}
+.table tbody tr:nth-child(even){  
+  @apply bg-metal-200;
+}
+
+.table th{
+  @apply px-4 py-2 text-sm font-bold uppercase border-r text-dblue-800 bg-metal-300 border-metal-400;
+}
+.table th:last-child { 
+  border-right: none;
+}
+td[role=gridcell] {
+  @apply px-4 py-2 text-base border-r border-metal-400;
+}
+td[role=gridcell]:last-child { 
+  border-right: none;
+}
+
+button, .button {
+  @apply text-lg font-semibold font-heading;
 }
