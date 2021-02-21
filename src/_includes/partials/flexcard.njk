@@ -5,7 +5,7 @@
   <div class="self-start flex-1 mb-4 sm:mb-0 sm:mr-4">
     <h2 class="mt-0 text-2xl font-bold">{{ linkcard.data.title }}</h2>
     <p class="mt-1">
-      {{ linkcard.data.desc }}
+      {{ linkcard.templateContent | safe }}
     </p>
   </div>
   <div class="flex items-center">

@@ -44,7 +44,7 @@ path: home
 	<section id="patienteninfo" class="max-w-5xl py-10 mx-auto">
 		<h1 class="text-center text-gold-600">Patiënteninfo</h1>
 
-    <section class="py-4 ">
+    <section class="py-4">
       <div class="container max-w-5xl px-8 my-8">
         {% for linkcard in collections.linkcard %} 
           {% include './_includes/partials/flexcard.njk' %} 
@@ -79,5 +79,6 @@ path: home
 		<h1>Hero</h1>
 	</section>
 </div> -->
+{% include './_includes/partials/moredoctors.njk' %} 
 
 {% include './_includes/partials/moreinfo.njk' %} 
