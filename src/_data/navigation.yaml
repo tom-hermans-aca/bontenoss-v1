@@ -1,12 +1,10 @@
 ---
 items:
-  - text: Corona
+  - text: Coronaregels
     url: "#corona"
   - text: Artsen
     url: "#doctors"
-  - text: ds
-    url: "/ds"
-  - text: Blog
-    url: "/blog"
+  - text: Patiënteninfo
+    url: "#patienteninfo"
   - text: Contact
-    url: "/contact"
+    url: "#contact"

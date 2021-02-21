@@ -20,6 +20,8 @@ path: home
 
 {% include './_includes/partials/cta-contact.njk' %}
 
+{% include './_includes/partials/welcome.njk' %}
+
 {% include './_includes/partials/corona_short.njk' %}
 
 
@@ -39,8 +41,16 @@ path: home
 </div>
 
 <div class="bg-metal-300">
-	<section id="doctors" class="max-w-5xl py-10 mx-auto">
+	<section id="patienteninfo" class="max-w-5xl py-10 mx-auto">
 		<h1 class="text-center text-gold-600">Patiënteninfo</h1>
+
+    <section class="py-4 ">
+      <div class="container max-w-5xl px-8 my-8">
+        {% for linkcard in collections.linkcard %} 
+          {% include './_includes/partials/flexcard.njk' %} 
+        {% endfor %}
+      </div>
+    </section>
 
 		<h2 class="text-center text-gold-600">Het ziekenhuis</h2>
 		<p>
@@ -70,6 +80,4 @@ path: home
 	</section>
 </div> -->
 
-{% include './_includes/partials/moreinfo.njk' %} {% include
-'./_includes/partials/mrk.njk' %} {% include "./_includes/partials/content.html"
-%}
+{% include './_includes/partials/moreinfo.njk' %} 
