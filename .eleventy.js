@@ -3,14 +3,6 @@ const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const svgContents = require("eleventy-plugin-svg-contents");
-const {
-  cssmin,
-  debug,
-  humandate,
-  isodate,
-  markdownify,
-} = require('@injms/quack-nunjucks-filters')
-
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -76,17 +68,7 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
-  let i = 0;
-  eleventyConfig.addFilter('cssmin', (css) => cssmin(css))
-  eleventyConfig.addFilter('debug', (thing) => debug(thing))
-  eleventyConfig.addFilter('humandate', (datestring, locale) => humandate(datestring, locale))
-  eleventyConfig.addFilter('isodate', (datestring) => isodate(datestring))
-  eleventyConfig.addFilter('markdownify', (markdown) => {
-    i++;
-    let str = String(markdown)
-    console.log('typeof', i, typeof markdown);
-    markdownify.render(str)
-  });
+
   // Note the use of `render()`
 
   // Markdownify filter
