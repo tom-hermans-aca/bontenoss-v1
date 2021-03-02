@@ -177,7 +177,7 @@ table {
     border-collapse: collapse;
     /* border: 1px solid; */
     /* border-color: #4299e1; */
-    @apply mt-4 rounded-lg shadow-md;
+    @apply rounded-lg shadow-md;
 }
 table thead {
   @apply shadow border-metal-200
