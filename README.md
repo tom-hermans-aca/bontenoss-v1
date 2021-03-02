@@ -55,6 +55,16 @@ npm run build
 npm run start
 ```
 
+
+### 6\. Run Netlify CMS locally
+Open new terminal window and run:
+
+```
+npx netlify-cms-proxy-server
+```
+
+
 ## Author
 
 Surjith S M ( [@surjithctly](https://surjithctly.in/) )
+Forked and adapted ( [@tomhermans](http://www.tomhermans.com) )

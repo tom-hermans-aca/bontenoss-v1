@@ -37,7 +37,7 @@ collections:
   - name: "linkcard"
     label: "Linkcard"
     folder: "src/linkcards"
-    create: true # Change to true to allow editors to create new doctors
+    create: true # Change to true to allow editors to create new linkcards
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
@@ -59,8 +59,26 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Description", name: "desc", widget: "markdown", required: false }
+      # - { label: "Description", name: "desc", widget: "markdown", required: false }
       - { label: "Calendar", name: "calendar", widget: "markdown", required: false }
+      - label: "List Extra"
+        name: "listextra"
+        minimize_collapsed: false
+        widget: "list"
+        fields:
+          - {label: List Item, name: listitem, widget: string, default: ""}
+      # - { 
+      #   label: "Specialisation", 
+      #   name: "specialisation", 
+      #   widget: "list", 
+      #   default: [""], 
+      #   allow_add: true, 
+      #   collapsed: false, 
+      #   fields:
+      #     - label: Quote, name: quote, widget: string, default: "Everything is awesome!"
+      #     - label: Author, name: author, widget: string,
+      # }
+      
       - { label: "Image", name: "thumbnail", widget: "image", required: false }
       - { label: "Avatar", name: "avatar", widget: "image", required: false }
       - widget: select

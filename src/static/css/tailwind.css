@@ -171,30 +171,41 @@ body pre[class*="language-"] {
 }
 
 /* tables */
-.table {
+table {
     @apply w-full min-w-full p-8 divide-y rounded divide-metal-400 bg-metal-200;
     font-variant-numeric: lining-nums tabular-nums;
     border-collapse: collapse;
     /* border: 1px solid; */
     /* border-color: #4299e1; */
+    @apply mt-4 rounded-lg shadow-md;
 }
-.table tbody tr:nth-child(odd){
+table thead {
+  @apply shadow border-metal-200
+}
+table tbody {
+  @apply divide-y divide-metal-400;
+}
+table tbody tr:nth-child(odd){
   @apply bg-metal-100;
 }
-.table tbody tr:nth-child(even){  
+table tbody tr:nth-child(even){  
   @apply bg-metal-200;
 }
+table tbody tr td:first-child {
+  @apply text-sm font-bold uppercase bg-metal-200;
+}
 
-.table th{
+table th{
   @apply px-4 py-2 text-sm font-bold uppercase border-r text-dblue-800 bg-metal-300 border-metal-400;
 }
-.table th:last-child { 
+table th:last-child { 
   border-right: none;
 }
-td[role=gridcell] {
+td[role=gridcell], td {
   @apply px-4 py-2 text-base border-r border-metal-400;
 }
-td[role=gridcell]:last-child { 
+td[role=gridcell]:last-child,
+td:last-child { 
   border-right: none;
 }
 
