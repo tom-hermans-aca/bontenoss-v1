@@ -213,3 +213,11 @@ td:last-child {
 button, .button {
   @apply text-lg font-semibold font-heading;
 }
+
+/* SVG Dividers*/
+.custom-shape-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 61px;
+}
