@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gynaecologiepraktijk Obgyn Antwerpen. Dr. Tina Vanderheyden &amp; Dr.Ben De Becker. Gynaecologie. Prenatale diagnostiek en hoogrisico verloskunde">
     <title>
       {{title}}
     </title>
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
+    
+    {% if settings.description %}
+      <meta name="description" content="{{settings.description}}"/>
     {% endif %}
+
+    <link rel="canonical" href="{{ page.url }}" />
+    <meta name="robots" content="index, follow" />
+
     <link rel="preload" href="/static/fonts/Atkinson-Hyperlegible/webfonts/WOFF2/Atkinson-Hyperlegible-Regular-102a.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/static/fonts/Basier/Basier-Circle-semibold-webfont/basiercircle-semibold-webfont.woff2" as="font" type="font/woff2" crossorigin>
 
@@ -19,6 +23,7 @@
     {% if prism == true %}
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
+    {% seo "" %}
   </head>
   <body>
     {% include "./partials/navbar.html" %}

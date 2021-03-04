@@ -4,6 +4,9 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
 const svgContents = require("eleventy-plugin-svg-contents");
 
+const pluginSEO = require("eleventy-plugin-seo");
+
+
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
   eleventyConfig.setUseGitIgnore(false);
@@ -22,6 +25,18 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("machineDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
+
+  // SEO
+  eleventyConfig.addPlugin(pluginSEO, require("./src/_data/seo.json"));
+
+  // eleventyConfig.addPlugin(pluginSEO, {
+  //   title: "Foobar Site",
+  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  //   url: "https://foo.com",
+  //   author: "Jane Doe",
+  //   twitter: "username",
+  //   image: "foo.jpg"
+  // });
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
