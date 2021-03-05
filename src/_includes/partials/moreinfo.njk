@@ -2,6 +2,10 @@
 	<div class="container max-w-5xl px-8 my-8">
 		<div class="mt-8 text-center">
 			<h2 class="my-8 text-dblue-700">Zwangerschap en bevallen</h2>
+      <p>
+			Hier vindt U meer informatie vinden over uw
+			<strong>zwangerschap</strong> en <strong>bevallen</strong>.
+		</p>
 		</div>
 
 		<div
@@ -37,13 +41,17 @@
 				<a href="{{ post.data.link | url }}">
 					#}
 					<h1 class="m-0 text-2xl font-bold text-dblue-500">
+            {% if post.data.link %}
 						<a
 							href="{{ post.data.link | url }}"
 							class="no-underline text-dblue-500"
 						>
+            {% endif %}
 							{% if post.data.title %} {{ post.data.title }} {% else %} Untitled
 							{% endif %}
-						</a>
+						{% if post.data.link %}
+            </a>
+            {% endif %}
 					</h1>
 					{# {% if post.data.description %}
 					<p class="mt-2">{{ post.data.description }}</p>
