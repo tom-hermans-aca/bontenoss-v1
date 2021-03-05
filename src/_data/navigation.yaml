@@ -6,5 +6,7 @@ items:
     url: "#doctors"
   - text: Patiënteninfo
     url: "#patienteninfo"
+  - text: Zwangerschap
+    url: "#zwangerschap"
   - text: Contact
     url: "#contact"

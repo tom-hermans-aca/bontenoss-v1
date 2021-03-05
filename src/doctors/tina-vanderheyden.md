@@ -27,4 +27,4 @@ avatar: /static/img/tina_portrait_crops_square.jpg
 Direction: TextLeft
 direction: TextRight
 ---
-Dr. Tina Vanderheyden is afgestudeerd als geneesheer specialist in de gynaecologie en verloskunde aan de KU Leuven in In 2000 heeft zij in het Verenigd Koninkrijk een bijkomende opleiding gevolgd tot subspecialist in de prenatale diagnostiek en hoogrisico verloskunde. Dr. Tina Vanderheyden is eveneens werkzaam op de dienst prenatale diagnostiek en Maternal Intensive Care van het St. Augustinusziekenhuis.
+Dr. Tina Vanderheyden is afgestudeerd als geneesheer specialist in de gynaecologie en verloskunde aan de KU Leuven in In 2000 heeft zij in het Verenigd Koninkrijk een bijkomende opleiding gevolgd tot subspecialist in de prenatale diagnostiek en hoogrisico verloskunde. Dr. Tina Vanderheyden is eveneens werkzaam op de [dienst prenatale diagnostiek en Maternal Intensive Care](https://www.gzaziekenhuizen.be/specialismen/verloskunde/prenatale-diagnostiek) van het [St. Augustinusziekenhuis](https://www.gzaziekenhuizen.be/).
