@@ -29,9 +29,12 @@
     <meta property="og:image" content="https://gynaecologieantwerpen.be/static/img/og-image.jpg" />
   </head>
   <body>
+    <a href="#main-content">Skip to Content</a>
     {% include "./partials/navbar.html" %}
 
-    {{ content | safe }}
+    <main id="main-content" tabindex="-1">
+      {{ content | safe }}
+    </main>
 
     {% include "./partials/footer.html" %}
 
