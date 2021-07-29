@@ -6,7 +6,7 @@ path: home
 
 <!-- <div class="container flex flex-col items-center justify-center mx-auto lg:h-screen"> -->
 <div
-  class="relative py-8 mx-auto bg-blue-200"
+  class="relative py-8 mx-auto bg-redbrown-200"
   style="
     background-image: url('/static/img/zach-lucero-fwjsBPbRm4g-unsplash-flip-squoosh.jpg');
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@ path: home
         class="
           text-transparent
           bg-clip-text bg-gradient-to-r
-          from-blue-500
+          from-redbrown-500
           to-purple-600
         "
       >
@@ -42,15 +42,13 @@ path: home
   </div>
   <div class="absolute wave"></div>
 </div>
-<!-- {% include "./_includes/partials/corona.njk" %} -->
 
 {% include './_includes/partials/cta-contact.njk' %} {% include
-'./_includes/partials/welcome.njk' %} {% include
-'./_includes/partials/corona_short.njk' %}
-
-<div class="from-blue-100 to-blue-300 bg-gradient-to-b">
+'./_includes/partials/welcome.njk' %} {% include './_includes/partials/menu.njk'
+%} {#
+<div class="from-redbrown-100 to-redbrown-300 bg-gradient-to-b">
   <section id="doctors" class="py-10 mx-auto">
-    <h1 class="w-full max-w-6xl mx-auto font-bold text-center text-dblue-500">
+    <h1 class="w-full max-w-6xl mx-auto font-bold text-center text-brown-500">
       Artsen
     </h1>
     <div class="p-4 mx-auto">
@@ -61,8 +59,8 @@ path: home
       </ul>
     </div>
   </section>
-
-  <div class="text-blue-300 fill-current bg-metal-300 custom-shape-divider">
+  #} {#
+  <div class="text-redbrown-300 fill-current bg-metal-300 custom-shape-divider">
     <svg
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +75,7 @@ path: home
     </svg>
   </div>
 </div>
-
+#} {#
 <div class="bg-metal-300">
   <section id="patienteninfo" class="max-w-5xl py-10 mx-auto">
     <h1 class="text-center text-metal-900">Patiënteninfo</h1>
@@ -91,8 +89,8 @@ path: home
     </section>
   </section>
 </div>
-
-<div class="bg-blue-300 fill-current text-metal-300 custom-shape-divider">
+#} {#
+<div class="bg-redbrown-300 fill-current text-metal-300 custom-shape-divider">
   <svg
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
@@ -106,12 +104,5 @@ path: home
     ></path>
   </svg>
 </div>
-<!--
-<div class="bg-red-400">
-	<section id="doctors" class="max-w-5xl py-10 mx-auto">
-		<h1>Hero</h1>
-	</section>
-</div> -->
-
-{% include './_includes/partials/moreinfo.njk' %} {% include
-'./_includes/partials/gynaecologie.njk' %}
+#} {# {% include './_includes/partials/moreinfo.njk' %} {% include
+'./_includes/partials/gynaecologie.njk' %} #}

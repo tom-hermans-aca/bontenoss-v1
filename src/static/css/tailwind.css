@@ -13,12 +13,12 @@
 }
 /* Hide skip link when it's not focused */
 [href="#main-content"]:not(:focus) {
-	clip: rect(0 0 0 0); 
+	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
 	height: 1px;
 	overflow: hidden;
 	position: absolute;
-	white-space: nowrap; 
+	white-space: nowrap;
 	width: 1px;
 }
 
@@ -27,26 +27,26 @@
 /* @media (prefers-reduced-data: no-preference) { */
   /* @font-face {
     font-family: "WorkSans";
-    src: url('../fonts/Work-Sans/WorkSans-Roman-VF-subset.woff2') format("woff2"), 
+    src: url('../fonts/Work-Sans/WorkSans-Roman-VF-subset.woff2') format("woff2"),
       url('../fonts/Work-Sans/WorkSans-Roman-VF-subset.woff') format("woff");
     font-display: swap;
   } */
   @font-face {
     font-family: "Atkinson";
-    src: url('../fonts/Atkinson-Hyperlegible/webfonts/WOFF2/Atkinson-Hyperlegible-Regular-102a.woff2') format("woff2"), 
+    src: url('../fonts/Atkinson-Hyperlegible/webfonts/WOFF2/Atkinson-Hyperlegible-Regular-102a.woff2') format("woff2"),
       url('../fonts/Atkinson-Hyperlegible/webfonts/WOFF/Atkinson-Hyperlegible-Regular-102a.woff') format("woff");
     font-display: swap;
   }
-  
+
   @font-face {
     font-family: "Basier Circle";
-    src: url('../fonts/Basier/Basier-Circle-semibold-webfont/basiercircle-semibold-webfont.woff2') format("woff2"), 
+    src: url('../fonts/Basier/Basier-Circle-semibold-webfont/basiercircle-semibold-webfont.woff2') format("woff2"),
       url('../fonts/Basier/Basier-Circle-semibold-webfont/basiercircle-semibold-webfont.woff') format("woff");
     font-display: swap;
   }
   /* @font-face {
     font-family: "FiraCode";
-    src: url('../fonts/FiraCode/FiraCode-VF-subset.woff2') format("woff2"), 
+    src: url('../fonts/FiraCode/FiraCode-VF-subset.woff2') format("woff2"),
       url('../fonts/FiraCode/FiraCode-VF-subset.woff') format("woff");
     font-display: swap;
   } */
@@ -73,7 +73,7 @@ body {
   font-family: var(--basefont), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   /* font-family: 'WorkSans'; */
   /* font-family: 'Atkinson'; */
-  @apply text-base lg:text-lg;  
+  @apply text-base lg:text-lg;
 }
 
 
@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--headingfont), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.05;
   font-weight: 568;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
 }
 
 h1, h2, h3, h4, h5,
@@ -136,19 +136,19 @@ p, address {
 }
 
 a {
-  @apply underline cursor-pointer text-dblue-500 hover:text-blue-600;
+  @apply underline cursor-pointer text-brown-500 hover:text-redbrown-600;
 }
 .bg-yellow-400 a {
-  @apply text-dblue-800;
+  @apply text-brown-800;
 }
 
-.flow > * + * { 
+.flow > * + * {
   /* --flow-space: 1em; */
   margin-top: var(--flow-space);
 }
 
 
-/* 
+/*
 h1 {
   font-family: var(--headingfont);
   @apply mb-3 text-4xl tracking-tighter text-center lg:text-7xl;
@@ -162,7 +162,7 @@ h3 {
 } */
 
 /* Syntax Highlighting*/
-/* 
+/*
 body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
   @apply bg-gray-800;
@@ -209,7 +209,7 @@ table tbody {
 table tbody tr:nth-child(odd){
   @apply bg-metal-100;
 }
-table tbody tr:nth-child(even){  
+table tbody tr:nth-child(even){
   @apply bg-metal-200;
 }
 table tbody tr td:first-child {
@@ -217,16 +217,16 @@ table tbody tr td:first-child {
 }
 
 table th{
-  @apply px-4 py-2 text-sm font-bold uppercase border-r text-dblue-800 bg-metal-300 border-metal-400;
+  @apply px-4 py-2 text-sm font-bold uppercase border-r text-brown-800 bg-metal-300 border-metal-400;
 }
-table th:last-child { 
+table th:last-child {
   border-right: none;
 }
 td[role=gridcell], td {
   @apply px-4 py-2 text-base border-r border-metal-400;
 }
 td[role=gridcell]:last-child,
-td:last-child { 
+td:last-child {
   border-right: none;
 }
 
@@ -235,13 +235,13 @@ button, .button {
 }
 
 /* SVG Dividers*/
-.custom-shape-divider svg {
+/* .custom-shape-divider svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 60px;
-}
-.wave { 
+} */
+.wave {
   position: absolute;
   bottom: -1px;
   width: 100%;

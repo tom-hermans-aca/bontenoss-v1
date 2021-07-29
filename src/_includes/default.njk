@@ -7,7 +7,7 @@
     <title>
       {{title}}
     </title>
-{#     
+{#
     {% if settings.description %}
       <meta name="description" content="{{settings.description}}"/>
     {% endif %} #}
@@ -39,55 +39,7 @@
     {% include "./partials/footer.html" %}
 
     <script src="/static/js/alpine.js"></script>
-    {# <script>
-      function winLoad(callback) {
-        if (document.readyState === 'complete') {
-          callback();
-        } else {
-          window.addEventListener("load", callback);
-        }
-      }
 
-      winLoad(function() {
-        console.log('Window is loaded');
-        let JSONfile = '/static/fonts/fonts.json';
-        let bodyEl = document.querySelector('body');
-        var selectEl = document.createElement("select");
-        
-        var values = ["dog", "cat", "parrot", "rabbit"];
-        
-        async function fetchJSON() {
-          const response = await fetch(JSONfile);
-          const fontlist = await response.json();
-          console.log(fontlist);
-
-        for (const val of fontlist) {
-          var option = document.createElement("option");
-          option.value = val;
-          option.text = val.charAt(0).toUpperCase() + val.slice(1);
-          selectEl.appendChild(option);
-        }
-          return fontlist;
-        }
-
-        fetchJSON().then(fontlist => {
-          return fontlist;
-        });         
-
-        selectEl.classList.add('selectfont');
-        selectEl.id = 'fontslist';
-        console.log(values);
-
-        
-        bodyEl.appendChild(selectEl);
-
-        selectEl.addEventListener("input", (event) => {
-          console.log('changed', event.target.value);
-          document.documentElement.style.setProperty("--headingfont", event.target.value);
-        })
-      });
-
-    </script> #}
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->

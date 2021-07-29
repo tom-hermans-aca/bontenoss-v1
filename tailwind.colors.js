@@ -1,8 +1,8 @@
 /*
-  lightblue: #018abd
-  darkblue: #003e7c
+  lightredbrown: #018abd
+  darkredbrown: #003e7c
   yellow: #ffcc01
-  lightgrey blueish: #a2b3c5
+  lightgrey redbrownish: #a2b3c5
   gold: #ae9255
   gold2: #be9e61
   red: #c30c0e
@@ -32,7 +32,7 @@ module.exports = {
     '700': '#a19d9b',
     '800': '#807d7c',
     '900': '#696665'
-  }, 'cadet-blue': {
+  }, 'cadet-redbrown': {
     '50': '#fafbfc',
     '100': '#f6f7f9',
     '200': '#e8ecf1',
@@ -87,7 +87,7 @@ module.exports = {
     '700': '#002f5d',
     '800': '#00254a',
     '900': '#001e3d'
-  }, 'curious-blue': {
+  }, 'curious-redbrown': {
     '50': '#f2f9fc',
     '100': '#e6f3f8',
     '200': '#c0e2ef',
