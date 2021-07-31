@@ -1,14 +1,8 @@
 ---
 items:
-  - text: Coronaregels
-    url: "#corona"
-  - text: Artsen
-    url: "#doctors"
-  - text: Patiënteninfo
-    url: "#patienteninfo"
-  - text: Zwangerschap
-    url: "#zwangerschap"
-  - text: Gynaecologie
-    url: "#gynaecologie"
+  - text: Menu
+    url: "#menu"
+  - text: Reserveren
+    url: "#reserveren"
   - text: Contact
     url: "#contact"
