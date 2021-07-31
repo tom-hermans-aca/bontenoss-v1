@@ -61,6 +61,7 @@
   --wght:300; --wdth:90; --lh:1.4; --ls:0px; --ital:0; --vf-font-size:24px;
   font-variation-settings: 'wght' var(--wght), 'wdth' var(--wdth),'slnt' var(--slnt), 'ital' var(--ital), 'GRAD' var(--grad);
   --lh: 1.2;
+  --ls: -0.008;
   --flow-space: 1em;
 }
 
@@ -83,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--headingfont), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.05;
   font-weight: 568;
+  letter-spacing: calc(var(--ls) * 1em);
   /* margin: 1rem 0; */
 }
 

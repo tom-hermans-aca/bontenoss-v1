@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "BontenOss",
+    "short_name": "BontenOss",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#864c2b",
+    "background_color": "#864c2b",
     "display": "standalone"
 }
