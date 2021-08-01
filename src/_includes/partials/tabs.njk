@@ -1,10 +1,11 @@
-<div class="px-2 py-8" x-data="{ tab: 'foo' }">
-  <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-100 focus:shadow-outline" :class="{ 'active bg-gold-800 font-semibold border-teal-700': tab === 'foo' }" @click="tab = 'foo'">Brunch</button>
-  <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-700 font-semibold': tab === 'bar' }" @click="tab = 'bar'">Snacks</button>
+<div class="px-2 py-8" x-data="{ tab: 'all' }">
+  <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold border-teal-700': tab === 'all' }" @click="tab = 'all'">Toon alles</button>
+  <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold"  :class="{ 'active bg-gold-800 font-semibold border-teal-700': tab === 'brunch' }" @click="tab = 'brunch'">Brunch</button>
+  <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold': tab === 'snacks' }" @click="tab = 'snacks'">Snacks</button>
 
-  <div class="p-8 border border-1 border-gray-300" x-show="tab === 'foo'" style="display: none;">
-    <div class="mb-12">
-      <h3 class="mb-4 font-serif text-4xl italic font-normal">brunch</h3>
+  <div class="p-8 border border-1 border-gray-300" x-show="tab === 'brunch' || tab === 'all'" style="display: none;">
+    <div class="mb-8">
+      <h3 class="mb-4 font-serif text-4xl italic font-normal">Brunch</h3>
       <div class="mb-4">
         <div class="flex items-start justify-between">
           <h4 class="text-gray-100">sourdough toast <span class="text-green-600">ve</span></h4><span class="text-sm text-gray-100 italic font-serif">&euro; 8</span>
@@ -80,9 +81,9 @@
     </div>
   </div>
 
-  <div class="p-8 border border-1 border-gray-300" x-show="tab === 'bar'">
-    <div class="mb-12">
-    <h3 class="mb-4 font-serif text-4xl italic font-normal">snacks</h3>
+  <div class="p-8 border border-1 border-gray-300" x-show="tab === 'snacks' || tab === 'all'">
+    <div class="mb-8">
+    <h3 class="mb-4 font-serif text-4xl italic font-normal">Snacks</h3>
     <div class="mb-4">
       <div class="flex items-start justify-between">
         <h4 class="text-gray-100">smoked mozzarella &amp; jalepeno croquettes (3) <span class="text-green-600">v</span></h4><span class="text-sm text-gray-100 italic font-serif">&euro; 12</span>
