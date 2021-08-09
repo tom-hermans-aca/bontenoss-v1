@@ -1,0 +1,25 @@
+drinks:
+  - title: Rode Wijn
+    price: 2
+    desc: Eleventy is a simpler static site generator.
+    type: wine
+  - title: Pils
+    price: 2
+    desc: Open source content management for your Git workflow
+    type: beer
+  - title: Coca Cola
+    price: 2
+    desc: A minimal framework for composing JavaScript behavior in your markup.
+    type: softdrink
+  - title: Duvel
+    price: 3,5
+    desc: A utility-first CSS framework for rapidly building custom designs.
+    type: beer
+  - title: Herkenrode Tripel
+    price: "4"
+    type: beer
+    desc: ""
+  - title: Tönissteiner Citron
+    price: "2"
+    desc: Tönissteiner Citron
+    type: softdrink
