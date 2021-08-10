@@ -1,10 +1,4 @@
-# Neat Starter
-
-Starter Template for **N**etlify CMS, **E**leventy, **A**lphine JS & **T**ailwind CSS
-
-## Live Demo
-
-[https://neat-starter.netlify.app/](https://neat-starter.netlify.app/)
+# DBO Netlify Starter
 
 ### Technologies used:
 
