@@ -155,7 +155,12 @@
             <div class="mb-4">
               <div class="flex items-start justify-between">
                 <h4 class="text-gray-100">{{item.title}}</h4>
-                <span class="text-sm text-gray-100 italic font-serif">&euro; {{item.price}}</span>
+                <span class="text-base text-gray-100 italic font-serif">
+                &euro; {{item.price}}
+                {% if item.price2 %}
+                  / &euro; {{item.price2}}
+                {% endif %}
+                </span>
               </div>
                 <p class="pr-5 text-sm text-gray-100">{{item.desc}}</p>
             </div>
