@@ -166,7 +166,7 @@ collections:
         file: "src/_data/drinks.yaml"
         fields:
           - label: drinks
-            name: drinks
+            name: items
             widget: list
             collapsed: true
             fields:
