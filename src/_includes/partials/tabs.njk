@@ -24,10 +24,15 @@
   <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold': tab === 'snacks' }" @click="tab = 'snacks'">Snacks</button>
   <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold': tab === 'drinks' }" @click="tab = 'drinks'">Drinks</button>
 
-
+    <div class="p-8 border border-1 border-gray-300" x-show="tab === 'all'">
+      <div class="">
+        <h2 class="font-serif text-4xl font-normal">MENU</h2>
+      </div>
+    </div>
 
     <div class="p-8 border border-1 border-gray-300" x-show="tab === 'brunch' || tab === 'all'" style="display: none;">
       <div class="mb-8">
+
         <h3 class="mb-4 font-serif text-4xl italic font-normal">Brunch</h3>
         <div class="mb-4">
           <div class="flex items-start justify-between">
