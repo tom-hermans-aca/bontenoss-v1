@@ -1,4 +1,19 @@
 items:
+  - title: Wit
+    price: 4,50
+    price2: 22,00
+    desc: Wit
+    type: wijn
+  - title: Rosé
+    price: 4,50.
+    price2: 22,00
+    desc: Rosé
+    type: wijn
+  - title: Rood
+    price: 4,50
+    price2: 22,00
+    desc: Rood
+    type: wijn
   - title: Domaine Saint Hilaire Vermentino
     price: "4,50"
     price2: "22"
@@ -194,3 +209,108 @@ items:
     price2:
     desc: champagne
     type: champagne
+  - title: Herkenrode Cister
+    price: 3,50
+    price2:
+    desc: van't vat / Brouwerij Cornelissen
+    type: bier
+  - title: Herkenrode Noctis
+    price: 3,50
+    price2:
+    desc: van't vat / Brouwerij Cornelissen
+    type: bier
+  - title: Herkenrode Vester Tripel
+    price: 4,00
+    price2:
+    desc: van't vat / Brouwerij Cornelissen
+    type: bier
+  - title: Ops Ale
+    price: 3,50
+    price2:
+    desc: op fles / Brouwerij Cornelissen
+    type: bier
+  - title: Limburgse Witte
+    price: 2,50
+    price2:
+    desc: op fles / Brouwerij Cornelissen
+    type: bier
+  - title: Limburgse Witte Citroen
+    price: 3,00
+    price2:
+    desc: op fles / Brouwerij Cornelissen
+    type: bier
+  - title: Limburgse Witte Rosé
+    price: 3,00
+    price2:
+    desc: op fles / Brouwerij Cornelissen
+    type: bier
+  - title: King Mule
+    price: 3,50
+    price2:
+    desc: op fles / Brouwerij Cornelissen
+    type: bier
+  - title: Double Port
+    price: 5,00
+    price2:
+    desc: op fles / Brouwerij Broeder Jacob
+    type: bier
+  - title: Double Espresso
+    price: 5,00
+    price2:
+    desc: op fles / Brouwerij Broeder Jacob
+    type: bier
+  - title: Lazarus Calvados infused
+    price: 5,00
+    price2:
+    desc: op fles / Brouwerij Broeder Jacob
+    type: bier
+  - title: Lazarus Bourbon Whiskey infused
+    price: 6,00
+    price2:
+    desc: op fles / Brouwerij Broeder Jacob
+    type: bier
+  - title: Lazarus Sherry infused
+    price: 6,00
+    price2:
+    desc: op fles / Brouwerij Broeder Jacob
+    type: bier
+  - title: Lazarus Armagnac infused
+    price: 6,00
+    price2:
+    desc: op fles / Brouwerij Broeder Jacob
+    type: bier
+  - title: Lazarus Rum infused
+    price: 6,00
+    price2:
+    desc: op fles / Brouwerij Broeder Jacob
+    type: bier
+  - title: Vlierbeek Grand Cru
+    price: 5,00
+    price2:
+    desc: op fles / Brouwerij Broeder Jacob
+    type: bier
+  - title: Vlierbeek Grand Cru
+    price: 2,50
+    price2:
+    desc: van 't vat / Brouwerij Wilderen
+    type: bier
+  - title: Wilderen Goud
+    price: 3,50
+    price2:
+    desc: op fles / Brouwerij Wilderen
+    type: bier
+  - title: Tripel Kanunnik
+    price: 4,00
+    price2:
+    desc: op fles / Brouwerij Wilderen
+    type: bier
+  - title: Wilderen Kriek
+    price: 4,00
+    price2:
+    desc: op fles / Brouwerij Wilderen
+    type: bier
+  - title: Cuvée Clarisse Whiskey infused
+    price: 5,00
+    price2:
+    desc: op fles / Brouwerij Wilderen
+    type: bier
