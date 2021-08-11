@@ -1,39 +1,4 @@
 items:
-  - title: Rode Wijn ofzo
-    price: 2
-    price2: 10
-    desc: Red wine
-    type: wine
-  - title: Pils
-    price: 2
-    price2: 10
-    desc: regular pils
-    type: beer
-  - title: Coca Cola
-    price: 2
-    price2: 10
-    desc: coke
-    type: softdrink
-  - title: Duvel
-    price: 3,5
-    price2: 10
-    desc: Stronger beer
-    type: beer
-  - title: Herkenrode Tripel
-    price: "4"
-    type: beer
-    price2: 10
-    desc: ""
-  - title: Tönissteiner Citron
-    price: "2"
-    price2: 10
-    desc: Tönissteiner Citron
-    type: softdrink
-  - title: Karmeliet
-    price: "4"
-    price2:
-    desc: Karmelietenbier
-    type: beer
   - title: Domaine Saint Hilaire Vermentino
     price: "4,50"
     price2: "22"
@@ -174,6 +139,58 @@ items:
     price2: "159"
     desc: Rood / Margaux
     type: wijn
-
-
-
+  - title: Aperitief v/h huis €8,50
+    price: "8,50"
+    price2:
+    desc: Porto
+    type:
+  - title: Porto White
+    price:
+    price2:
+    desc: Porto / Wit
+    type: porto
+  - title: Porto Tawny
+    price:
+    price2:
+    desc: Porto
+    type: porto
+  - title: Porto Vintage
+    price:
+    price2:
+    desc: Porto
+    type: porto
+  - title: Sherry
+    price:
+    price2:
+    desc: Sherry
+    type: porto
+  - title: Sherry PX
+    price:
+    price2:
+    desc: Sherry
+    type: sherry
+  - title: Sherry Olli Roso
+    price:
+    price2:
+    desc: Sherry
+    type: sherry
+  - title: Vermouth White
+    price:
+    price2:
+    desc: Vermouth
+    type: vermouth
+  - title: Cava L'Arboc
+    price:
+    price2:
+    desc: cava
+    type: cava
+  - title: Blanc de Blanc
+    price:
+    price2:
+    desc: champagne
+    type: champagne
+  - title: Rosé
+    price:
+    price2:
+    desc: champagne
+    type: champagne

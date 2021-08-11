@@ -6,14 +6,13 @@ path: home
 
 <!-- <div class="container flex flex-col items-center justify-center mx-auto lg:h-screen"> -->
 <div
-  class="relative py-8 mx-auto bg-redbrown-200"
+  class="relative py-8 mx-auto bg-redbrown-600"
   style="
-    {# background-image: url('/static/img/samuel-regan-asante-qBP3Fz7TPRM-unsplash.jpeg'); #}
     background-image: url('/static/img/jose-ignacio-pompe-s-Z-h0fEiBM-unsplash.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    {# background-blend-mode: overlay; #}
+    background-blend-mode: lighten;
     height: 60vh;
   "
 >
@@ -54,6 +53,9 @@ path: home
 <!-- -->
 {# {% include './_includes/partials/menu.njk' %} #}
 <!-- -->
+<div id="reserveren">
+  {% include './_includes/partials/cta-reserveren.njk' %}
+</div>
 
 {#
 <div class="from-redbrown-100 to-redbrown-300 bg-gradient-to-b">
