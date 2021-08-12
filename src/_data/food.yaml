@@ -1,21 +1,21 @@
 items:
   - title: Sparerib
-    price: 24,00
+    price: 24
     price2: null
     desc: Spareribs
     type: pork, hoofdgerecht
   - title: St Louis cut ribs
-    price: 26,00
+    price: 26
     price2: null
     desc: St Louis cut ribs
     type: pork, hoofdgerecht
   - title: Pork Rib Roast
-    price: 25,00
+    price: 25
     price2: null
     desc: St Louis cut ribs
     type: pork, hoofdgerecht
   - title: Short Rib
-    price: 27.5
+    price: 27,5
     price2: null
     desc: Short Rib
     type: beef, hoofdgerecht
@@ -40,97 +40,97 @@ items:
     desc: Rib Eye Grain Fed 300gr
     type: beef, hoofdgerecht
   - title: Turkey flat steak
-    price: 24,00
+    price: 24
     price2: null
     desc: Turkey flat steak
     type: poultry, hoofdgerecht
   - title: Caesar Salad / Chicken tender / Tomp kaas
-    price: 15,00
+    price: 15
     price2: null
     desc: Caesar Salad / Chicken tender / Tomp kaas
     type: poultry, hoofdgerecht
   - title: Home smoked salmon
-    price: 24,00
+    price: 24
     price2: null
     desc: Home smoked salmon
     type: fish, hoofdgerecht
   - title: Argentina red shrimp
-    price: 24,00
+    price: 24
     price2: null
     desc: Argentina red shrimp
     type: fish, hoofdgerecht
   - title: Steak 125gr
-    price: 12,00
+    price: 12
     price2: null
     desc: Steak 125gr
     type: kids
   - title: Burger beef / vegi
-    price: 10,00
+    price: 10
     price2: null
     desc: Burger beef / vegi
     type: kids
   - title: Spare rib
-    price: 12,00
+    price: 12
     price2: null
     desc: Spare rib
     type: kids
   - title: Turkey finger
-    price: 12,00
+    price: 12
     price2: null
     desc: Turkey finger
     type: kids
   - title: Kipdij scewer
-    price: 10,00
+    price: 10
     price2: null
     desc: Kipdij scewer
     type: kids
   - title: Vega linzen Burger
-    price: 18,00
+    price: 18
     price2: null
     desc: Vega linzen Burger
     type: vegetarisch
   - title: Portobello / gemarineerde tomaat / Catharinadal feta
-    price: 18,00
+    price: 18
     price2: null
     desc: Portobello / gemarineerde tomaat / Catharinadal feta
     type: vegetarisch
   - title: Caesar Salad / little gem / Tomp kaas
-    price: 18,00
+    price: 18
     price2: null
     desc: Caesar Salad / little gem / Tomp kaas
     type: vegetarisch
   - title: American pancake / vanille ijs / caramel
-    price: 8,00
+    price: 8
     price2: null
     desc: Pannekoek met ijs
     type: dessert
   - title: Triple chocolate cake / vanille ijs
-    price: 8,00
+    price: 8
     price2: null
     desc: Cake met ijs
     type: dessert
   - title: Peer / pecan / spiced honey / Grevenbroecker kaas
-    price: 10,00
+    price: 10
     price2: null
     desc: Peer / pecan / spiced honey / Grevenbroecker kaas
     type: dessert
   - title: Dame Blanche
-    price: 8,00
+    price: 8
     price2: null
     desc: Ijs met chocolade saus
     type: dessert
   - title: Kaas plankje
-    price: 10,00
+    price: 10
     price2: null
     desc: Diverse kazen
     type: dessert
   - title: Turkey fingers
-    price: 12,00
+    price: 12
     price2: null
     desc: Kalkoen
     type: poultry, voorgerecht
   - title: Hot wings
-    price: 12,00
+    price: 12
     price2: null
     desc: Chicken Hot wings
     type: poultry, voorgerecht, finger food
@@ -155,32 +155,32 @@ items:
     desc: Nacho's met veggies
     type: vegetarisch, voorgerecht, fingerfood
   - title: Carpaccio smoked beef
-    price: 15,00
+    price: 15
     price2: null
     desc: Carpaccio van gerookt rundsvlees
     type: beef, voorgerecht
   - title: Carpaccio smoked beef & verse truffel
-    price: 19,00
+    price: 19
     price2: null
     desc: Carpaccio van gerookt rundsvlees
     type: beef, voorgerecht
   - title: Carpaccio smoked tuna
-    price: 15,00
+    price: 15
     price2: null
     desc: Carpaccio van gerookte tonijn
     type: fish, voorgerecht
   - title: Brood / Napoleon kaas
-    price: 12,00
+    price: 12
     price2: null
     desc: Brood met Napoleon kaas
     type: voorgerecht, fingerfood
   - title: Moink balls
-    price: 12,00
+    price: 12
     price2: null
     desc: Moo/Oink balls ;)
     type: beef, pork, fingerfood
   - title: Burnt Ends
-    price: 12,00
+    price: 12
     price2: null
     desc: Moo/Oink balls ;)
     type: beef, pork, fingerfood
@@ -190,42 +190,42 @@ items:
     desc: Moo/Oink balls ;)
     type: beef, pork, fingerfood
   - title: Foodsharing menu
-    price: 36,00 / pp
+    price: 36 / pp
     price2:
     desc: foodsharing menu
     type: fingerfood, hoofdgerecht
   - title: Black Angus / truffelmayonaise / Tomp kaas
-    price: 18,00
+    price: 18
     price2: null
     desc: Black Angus Burger
     type: beef, burger
   - title: Black Angus & verse truffel / truffelmayonaise / Tomp kaas
-    price: 22,00
+    price: 22
     price2: null
     desc: Black Angus Burger & verse truffel
     type: beef, burger
   - title: Black Angus / pepersaus / rode ui
-    price: 18,00
+    price: 18
     price2: null
     desc: Black Angus Burger
     type: beef, burger
   - title: Black Angus / bacon / cheese / onionrings
-    price: 18,00
+    price: 18
     price2: null
     desc: Black Angus Burger met spek, kaas en uiringen
     type: beef, burger
   - title: Chipotle roomsaus
-    price: 3,00
+    price: 3
     price2: null
     desc: Chipotle roomsaus
     type: saus
   - title: Pickles saus
-    price: 3,00
+    price: 3
     price2: null
     desc: Pickles saus
     type: saus
   - title: Béarnaise saus
-    price: 3,00
+    price: 3
     price2: null
     desc: Béarnaise saus
     type: saus

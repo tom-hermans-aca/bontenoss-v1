@@ -16,7 +16,6 @@
 <div class="max-w-full lg:max-w-4xl mx-auto mb-8">
   <div class="px-2 py-8" x-data="{ tab: 'all' }">
     <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold border-teal-700': tab === 'all' }" @click="tab = 'all'">Menu</button>
-    <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold"  :class="{ 'active bg-gold-800 font-semibold border-teal-700': tab === 'brunch' }" @click="tab = 'brunch'">Brunch</button>
     <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold': tab === 'hoofdgerechten' }" @click="tab = 'hoofdgerechten'">Hoofdgerechten</button>
     <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold': tab === 'drinks' }" @click="tab = 'drinks'">Drinks</button>
 
@@ -24,85 +23,6 @@
         <div class="">
           <h2 class="font-serif text-4xl font-normal">MENU</h2>
           <p>De hele kaart. Of kies hierboven snel drinks, fingerfood of hoofdgerechten, desserts ..</p>
-        </div>
-      </div>
-
-      <div class="p-8 border border-1 border-gray-300" x-show="tab === 'brunch' || tab === 'all'" style="display: none;">
-        <div class="mb-8">
-
-          <h3 class="mb-4 font-serif text-4xl italic font-normal">Brunch</h3>
-          <div class="mb-4">
-            <div class="flex items-start justify-between">
-              <h4 class="text-gray-100">sourdough toast <span class="text-green-200">ve</span></h4><span class="text-sm text-gray-100 italic font-serif">&euro; 8</span>
-            </div>
-            <p class="pr-5 text-xs text-gray-100">sourdough / multigrain / fruit / gluten free</p>
-          </div>
-          <div class="mb-4">
-            <div class="flex items-start justify-between">
-              <h4 class="text-gray-100">free range eggs on toast <span class="text-green-200">v</span></h4><span class="text-sm text-gray-100 italic font-serif">&euro; 12</span>
-            </div>
-            <p class="pr-5 text-xs text-gray-100">poached / scrambled / fried</p>
-          </div>
-          <div class="mb-4">
-            <div class="flex items-start justify-between">
-              <h4 class="text-gray-100">black rice porridge <span class="text-green-200">ve</span></h4><span class="text-sm text-gray-100 italic font-serif">&euro; 18</span>
-            </div>
-            <p class="pr-5 text-xs text-gray-100">sticky black rice, oats, coconut, blueberries, sunrise lime</p>
-          </div>
-          <div class="mb-4">
-            <div class="flex items-start justify-between">
-              <h4 class="text-gray-100">avocado &amp; pumpkin croquettes <span class="text-green-200">v</span></h4><span class="text-sm text-gray-100 italic font-serif">&euro; 22</span>
-            </div>
-            <p class="pr-5 text-xs text-gray-100">avocado, pumpkin croquettes, goats feta, black bean, charred corn, tomato, onion, egg</p>
-          </div>
-          <div class="mb-4">
-            <div class="flex items-start justify-between">
-              <h4 class="text-gray-100">chilli folded eggs <span class="text-green-200">v</span></h4><span class="text-sm text-gray-100 italic font-serif">&euro; 22</span>
-            </div>
-            <p class="pr-5 text-xs text-gray-100">citrus whipped tofu, native plum relish, togarashi, charcoal sourdough</p>
-          </div>
-          <div class="mb-4">
-            <div class="flex items-start justify-between">
-              <h4 class="text-gray-100">cauliflower florets <span class="text-green-200">v</span></h4><span class="text-sm text-gray-100 italic font-serif">&euro; 22</span>
-            </div>
-            <p class="pr-5 text-xs text-gray-100">sage creme fraiche, rhubarb ketchup, lemon, poached egg</p>
-          </div>
-          <div class="mb-4">
-            <div class="flex items-start justify-between">
-              <h4 class="text-gray-100">blue swimmer crab crumpets</h4><span class="text-sm text-gray-100 italic font-serif">&euro; 24</span>
-            </div>
-            <p class="pr-5 text-xs text-gray-100">sourdough crumpets, blue swimmer crab, asparagus, cod roe hollandaise, egg, fingerlime oil</p>
-          </div>
-          <div class="mb-4">
-            <div class="flex items-start justify-between">
-              <h4 class="text-gray-100">ballarat breakfast</h4><span class="text-sm text-gray-100 italic font-serif">&euro; 24</span>
-            </div>
-            <p class="pr-5 text-xs text-gray-100">thick-cut rasher, toulouse sausage, pork cheek, braised lentils, crisped kale, poached egg</p>
-          </div>
-          <div class="mb-4">
-            <div class="flex items-start justify-between">
-              <h4 class="text-gray-100">forest mushrooms <span class="text-green-200">v</span></h4><span class="text-sm text-gray-100 italic font-serif">&euro; 22</span>
-            </div>
-            <p class="pr-5 text-xs text-gray-100">shimeji, enoki, king brown &amp; oyster mushrooms, sage, puffed wild rice, parsley verde, sourdough, fried egg</p>
-          </div>
-          <div class="mb-4">
-            <div class="flex items-start justify-between">
-              <h4 class="text-gray-100">grilled octopus</h4><span class="text-sm text-gray-100 italic font-serif">&euro; 28</span>
-            </div>
-            <p class="pr-5 text-xs text-gray-100">fremantle octopus, n’duja, potato, pickled onion, fried egg, brighton salt bush</p>
-          </div>
-          <div class="mb-4">
-            <div class="flex items-start justify-between">
-              <h4 class="text-gray-100">port phillip bay snapper</h4><span class="text-sm text-gray-100 italic font-serif">&euro; 30</span>
-            </div>
-            <p class="pr-5 text-xs text-gray-100">snapper fillet, swimmer crab macaroni, prawn head jus, chilli oil</p>
-          </div>
-          <div class="mb-4">
-            <div class="flex items-start justify-between">
-              <h4 class="text-gray-100">angus flank streak</h4><span class="text-sm text-gray-100 italic font-serif">&euro; 32</span>
-            </div>
-            <p class="pr-5 text-xs text-gray-100">300g gippsland flank steak, chimichurri, wagyu fat pudding</p>
-          </div>
         </div>
       </div>
 
@@ -116,9 +36,9 @@
                 <div class="flex items-start justify-between">
                   <h4 class="text-gray-100">{{item.title}}</h4>
                   <span class="text-base text-gray-100 italic font-serif">
-                  &euro; {{item.price}}
+                  &euro;{{item.price}}
                   {% if item.price2 %}
-                    / &euro; {{item.price2}}
+                    / &euro;{{item.price2}}
                   {% endif %}
                   </span>
                 </div>
@@ -142,9 +62,9 @@
                 <div class="flex items-start justify-between">
                   <h4 class="text-gray-100">{{item.title}}</h4>
                   <span class="text-base text-gray-100 italic font-serif">
-                  &euro; {{item.price}}
+                  &euro;{{item.price}}
                   {% if item.price2 %}
-                    / &euro; {{item.price2}}
+                    / &euro;{{item.price2}}
                   {% endif %}
                   </span>
                 </div>
