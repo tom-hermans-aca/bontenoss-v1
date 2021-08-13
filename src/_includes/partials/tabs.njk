@@ -14,6 +14,7 @@
 {% endmacro %}
 
 
+
 {# {% set drinkslist = collections.settings.drinks %} {% for drink in drinkslist %} drink:
 	<a href="{{ drink.url | url }}"> {{ drink.data.title }}</a> <br />
 	{{ drink.content }} {% endfor %} #}
@@ -33,7 +34,7 @@
   <div class="px-2 py-8" x-data="{ tab: 'all' }">
     <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold border-teal-700': tab === 'all' }" @click="tab = 'all'">Menu</button>
     <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold': tab === 'drinks' }" @click="tab = 'drinks'">Drinks</button>
-    <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold': tab === 'hoofdgerechten' }" @click="tab = 'hoofdgerechten'">Hoofdgerechten</button>
+    <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold': tab === 'hoofdgerechten' }" @click="tab = 'hoofdgerechten'">Food</button>
 
       <div class="p-8 border border-1 border-gray-300" x-show="tab === 'all'">
         <div class="">
@@ -46,8 +47,12 @@
         <div class="mb-8">
           <h3 class="mb-4 font-serif text-4xl italic font-normal">Drinks</h3>
           {% if drinks.items %}
-            {% for item in drinks.items %}
-              {{ menuItem(item.title,item.price,item.price2,item.desc, item.type) }}
+            {% set items = drinks.items %}
+            {% for type, items in items | groupby("type") %}
+                <h4 class="mb-4 font-serif text-3xl italic font-normal">{{ type }}</h4>
+                {% for item in items %}
+                    {{ menuItem(item.title,item.price,item.price2,item.desc, item.type) }}
+                {% endfor %}<br>
             {% endfor %}
           {% endif %}
         </div>
@@ -55,10 +60,14 @@
 
       <div class="p-8 border border-1 border-gray-300" x-show="tab === 'hoofdgerechten' || tab === 'all'">
         <div class="mb-8">
-          <h3 class="mb-4 font-serif text-4xl italic font-normal">Hoofdgerechten</h3>
+          <h3 class="mb-4 font-serif text-4xl italic font-normal">Food</h3>
           {% if food.items %}
-            {% for item in food.items %}
-              {{ menuItem(item.title,item.price,item.price2,item.desc, item.type) }}
+            {% set items = food.items %}
+            {% for type, items in items | groupby("type") %}
+                <h4 class="mb-4 font-serif text-3xl italic font-normal">{{ type }}</h4>
+                {% for item in items %}
+                    {{ menuItem(item.title,item.price,item.price2,item.desc, item.type) }}
+                {% endfor %}<br>
             {% endfor %}
           {% endif %}
         </div>
