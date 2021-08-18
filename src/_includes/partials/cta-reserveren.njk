@@ -13,23 +13,23 @@ form:focus-within {
 
 .input:focus + .label,
 .input:active + .label,
-.input.filled + .label {
+.input.filled + .label,
+.input:valid + .label {
   font-size: .75rem;
   transition: all 0.2s ease-out;
   top: -0.1rem;
-  color: #667eea;
+  color: #7c2400;
+  background: #fff;
+  padding: 0 .5em;
+  position: absolute;
+  left: 0.4em;
 }
 
-.label {
-  transition: all 0.2s ease-out;
-  top: 1.4rem;
-  left: 0;
-}
 </style>
 <div class="mt-10 bg-redbrown-600">
-  <section class="p-8 max-w-5xl mx-auto " id="reserveren">
+  <section class="max-w-5xl p-8 mx-auto " id="reserveren">
     <div class="max-w-xl m-auto text-center">
-      <form action="/thankyou" class="p-8 my-10 bg-gold-100 text-redbrown-900 rounded shadow-xl"
+      <form action="/thankyou" class="p-8 my-10 rounded shadow-xl bg-gold-100 text-redbrown-900"
       data-netlify="true" id="contact" method="post" name="contact">
         <input name="bot-field" type="hidden"><input name="form-name" type=
         "hidden" value="contact">
@@ -40,7 +40,7 @@ form:focus-within {
         <p>Vermeld allergenen bij reservatie.</p>
         <div class="relative mt-4 mb-4">
           <input class=
-          "w-full px-3 py-3 pt-5 pb-2 border border-gray-400 rounded appearance-none input focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600"
+          "w-full px-3 py-3 pt-5 pb-2 border border-gray-400 rounded appearance-none input focus focus:border-redbrown-600 focus:outline-none active:outline-none active:border-redbrown-600"
           id="name" name="name" required="" style=
           "background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAfBJREFUWAntVk1OwkAUZkoDKza4Utm61iP0AqyIDXahN2BjwiHYGU+gizap4QDuegWN7lyCbMSlCQjU7yO0TOlAi6GwgJc0fT/fzPfmzet0crmD7HsFBAvQbrcrw+Gw5fu+AfOYvgylJ4TwCoVCs1ardYTruqfj8fgV5OUMSVVT93VdP9dAzpVvm5wJHZFbg2LQ2pEYOlZ/oiDvwNcsFoseY4PBwMCrhaeCJyKWZU37KOJcYdi27QdhcuuBIb073BvTNL8ln4NeeR6NRi/wxZKQcGurQs5oNhqLshzVTMBewW/LMU3TTNlO0ieTiStjYhUIyi6DAp0xbEdgTt+LE0aCKQw24U4llsCs4ZRJrYopB6RwqnpA1YQ5NGFZ1YQ41Z5S8IQQdP5laEBRJcD4Vj5DEsW2gE6s6g3d/YP/g+BDnT7GNi2qCjTwGd6riBzHaaCEd3Js01vwCPIbmWBRx1nwAN/1ov+/drgFWIlfKpVukyYihtgkXNp4mABK+1GtVr+SBhJDbBIubVw+Cd/TDgKO2DPiN3YUo6y/nDCNEIsqTKH1en2tcwA9FKEItyDi3aIh8Gl1sRrVnSDzNFDJT1bAy5xpOYGn5fP5JuL95ZjMIn1ya7j5dPGfv0A5eAnpZUY3n5jXcoec5J67D9q+VuAPM47D3XaSeL4AAAAASUVORK5CYII=&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
           type="name"><label class=
@@ -49,27 +49,27 @@ form:focus-within {
         </div>
         <div class="relative mt-4 mb-4">
           <input class=
-          "w-full px-3 py-3 pt-5 pb-2 border border-gray-400 rounded appearance-none input focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600"
+          "w-full px-3 py-3 pt-5 pb-2 border border-gray-400 rounded appearance-none input focus focus:border-redbrown-600 focus:outline-none active:outline-none active:border-redbrown-600"
           id="telnr" name="telnr" required="" type="tel"><label class=
           "absolute pl-3 mt-2 mb-0 -mt-2 text-base text-gray-700 label leading-tighter cursor-text"
           for="telnr">GSM of telnr</label>
         </div>
         <div class="relative mb-4">
           <input class=
-          "w-full px-3 py-3 pt-5 pb-2 border border-gray-400 rounded appearance-none input focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600"
+          "w-full px-3 py-3 pt-5 pb-2 border border-gray-400 rounded appearance-none input focus focus:border-redbrown-600 focus:outline-none active:outline-none active:border-redbrown-600"
           id="email" name="email" required="" type="email"><label class=
           "absolute pl-3 mt-2 mb-0 -mt-2 text-base text-gray-700 label leading-tighter cursor-text"
           for="email">E-mailadres</label>
         </div>
         <div class="relative mb-4">
           <textarea class=
-          "w-full px-3 py-3 pt-5 pb-2 border border-gray-400 rounded appearance-none input focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600"
+          "w-full px-3 py-3 pt-5 pb-2 border border-gray-400 rounded appearance-none input focus focus:border-redbrown-600 focus:outline-none active:outline-none active:border-redbrown-600"
           id="message" name="message" required="" rows=
           "5"></textarea><label class=
           "absolute pl-3 mt-2 mb-0 -mt-2 text-base text-gray-700 label leading-tighter cursor-text"
           for="message">Uw bericht.</label>
         </div><button class=
-        "px-6 py-3 font-bold text-white bg-redbrown-700 rounded-full hover:bg-redbrown-500"
+        "px-6 py-3 font-bold text-white rounded-full bg-redbrown-700 hover:bg-redbrown-500"
         type="submit">Reserveer nu</button>
       </form>
     </div>

@@ -92,7 +92,7 @@ body {
   font-family: var(--basefont), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   /* font-family: 'WorkSans'; */
   /* font-family: 'Atkinson'; */
-  @apply text-base lg:text-lg text-gray-100;
+  @apply text-base text-gray-100 lg:text-lg;
   background-color: #222;
 }
 
@@ -270,16 +270,21 @@ form:focus-within {
 
 .input:focus + .label,
 .input:active + .label,
-.input.filled + .label {
+.input.filled + .label,
+.input:valid + .label {
   font-size: .75rem;
   transition: all 0.2s ease-out;
   top: -0.1rem;
-  color: #667eea;
+  color: #7c2400;
+  background: #fff;
+  padding: 0 .5em;
+  position: absolute;
+  left: 0.4em;
 }
 
 .label {
   transition: all 0.2s ease-out;
-  top: 0.4rem;
+  top: 1.7rem;
   left: 0;
 }
 
