@@ -1,8 +1,8 @@
-{% macro menuItem(menuTitle,menuPrice,menuPrice2,menuDesc, menuType) %}
+{% macro menuItem(menuTitle,menuPrice,menuPrice2,menuDesc, menuType, menuSection) %}
   <div class="mb-4">
     <div class="flex items-start justify-between">
       <h4 class="text-gray-100">{{ menuTitle }}</h4>
-      <span class="text-base text-gray-100 italic font-serif">
+      <span class="font-serif text-base italic text-gray-100">
       &euro;{{ menuPrice }}
       {% if price2 %}
         / &euro;{{ menuPrice2 }}
@@ -19,7 +19,7 @@
 	<a href="{{ drink.url | url }}"> {{ drink.data.title }}</a> <br />
 	{{ drink.content }} {% endfor %} #}
 {#
-<div class="w-full max-w-2xl grid grid-cols-1 lg:grid-cols-2 gap-4 my-8 px-4 lg:mx-0">
+<div class="grid w-full max-w-2xl grid-cols-1 gap-4 px-4 my-8 lg:grid-cols-2 lg:mx-0">
  #}
     {# {% if food.items %}
         {% for item in food.items %}
@@ -30,26 +30,29 @@
 
 {# </div> #}
 
-<div class="max-w-full lg:max-w-4xl mx-auto mb-8">
+<div class="max-w-full mx-auto mb-8 lg:max-w-4xl">
   <div class="px-2 py-8" x-data="{ tab: 'all' }">
-    <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold border-teal-700': tab === 'all' }" @click="tab = 'all'">Menu</button>
-    <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold': tab === 'drinks' }" @click="tab = 'drinks'">Drinks</button>
-    <button class="px-6 py-4 border-l border-t border-r border-1 rounded-t border-teal-500 outline-none focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active font-semibold" :class="{ 'active bg-gold-800 font-semibold': tab === 'hoofdgerechten' }" @click="tab = 'hoofdgerechten'">Food</button>
+    <button class="px-6 py-4 font-semibold border-t border-l border-r border-teal-500 rounded-t outline-none border-1 focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active" :class="{ 'active bg-gold-800 font-semibold border-teal-700': tab === 'all' }" @click="tab = 'all'">Menu</button>
+    <button class="px-6 py-4 font-semibold border-t border-l border-r border-teal-500 rounded-t outline-none border-1 focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active" :class="{ 'active bg-gold-800 font-semibold': tab === 'drinks' }" @click="tab = 'drinks'">Drinks</button>
+    <button class="px-6 py-4 font-semibold border-t border-l border-r border-teal-500 rounded-t outline-none border-1 focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active" :class="{ 'active bg-gold-800 font-semibold': tab === 'food' }" @click="tab = 'food'">Food</button>
+    <button class="px-6 py-4 font-semibold border-t border-l border-r border-teal-500 rounded-t outline-none border-1 focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active" :class="{ 'active bg-gold-800 font-semibold': tab === 'kids' }" @click="tab = 'kids'">Kids</button>
 
-      <div class="p-8 border border-1 border-gray-300" x-show="tab === 'all'">
+    <button class="px-6 py-4 font-semibold border-t border-l border-r border-teal-500 rounded-t outline-none border-1 focus:font-bold active:font-bold hover:bg-gold-700 focus:shadow-outline active" :class="{ 'active bg-gold-800 font-semibold': tab === 'fingerfood' }" @click="tab = 'fingerfood'">Fingerfood</button>
+
+      <div class="p-8 border border-gray-300 border-1" x-show="tab === 'all'">
         <div class="">
           <h2 class="font-serif text-4xl font-normal">MENU</h2>
           <p>De hele kaart. Of kies hierboven snel drinks, fingerfood of hoofdgerechten, desserts ..</p>
         </div>
       </div>
 
-      <div class="p-8 border border-1 border-gray-300" x-show="tab === 'drinks' || tab === 'all'">
+      <div class="p-8 border border-gray-300 border-1" x-show="tab === 'drinks' || tab === 'all'">
         <div class="mb-8">
           <h3 class="mb-4 font-serif text-4xl italic font-normal">Drinks</h3>
           {% if drinks.items %}
             {% set items = drinks.items %}
             {% for type, items in items | groupby("type") %}
-                <h4 class="mb-4 font-serif text-3xl italic font-normal">{{ type }}</h4>
+                <h4 class="mb-4 font-serif text-3xl italic font-normal">{{ type | capitalize  }}</h4>
                 {% for item in items %}
                     {{ menuItem(item.title,item.price,item.price2,item.desc, item.type) }}
                 {% endfor %}<br>
@@ -58,16 +61,53 @@
         </div>
       </div>
 
-      <div class="p-8 border border-1 border-gray-300" x-show="tab === 'hoofdgerechten' || tab === 'all'">
+      <div class="p-8 border border-gray-300 border-1" x-show="tab === 'food' || tab === 'all'">
         <div class="mb-8">
           <h3 class="mb-4 font-serif text-4xl italic font-normal">Food</h3>
           {% if food.items %}
             {% set items = food.items %}
-            {% for type, items in items | groupby("type") %}
-                <h4 class="mb-4 font-serif text-3xl italic font-normal">{{ type }}</h4>
+            {% for section, items in items | groupby("section") %}
+                <h4 class="mb-4 font-serif text-3xl italic font-normal">{{ section | capitalize }}</h4>
                 {% for item in items %}
-                    {{ menuItem(item.title,item.price,item.price2,item.desc, item.type) }}
+                    {{ menuItem(item.title,item.price,item.price2,item.desc, item.type, item.section) }}
                 {% endfor %}<br>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+
+
+      <div class="p-8 border border-gray-300 border-1" x-show="tab === 'kids'">
+        <div class="mb-8">
+          <h3 class="mb-4 font-serif text-4xl italic font-normal">Kids</h3>
+                    
+          {% if food.items %}
+            {% set items = food.items %}
+            {% for item in items %}
+              
+              <h4 class="mb-4 font-serif text-3xl italic font-normal">{{ section | capitalize }}</h4>
+                {% if item.section == 'kids' %}
+                  {{ menuItem(item.title,item.price,item.price2,item.desc, item.type, item.section) }}
+                {% endif %}
+              
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="p-8 border border-gray-300 border-1" x-show="tab === 'fingerfood'">
+        <div class="mb-8">
+          <h3 class="mb-4 font-serif text-4xl italic font-normal">Fingerfood</h3>
+                    
+          {% if food.items %}
+            {% set items = food.items %}
+            {% for item in items %}
+              
+              <h4 class="mb-4 font-serif text-3xl italic font-normal">{{ section | capitalize }}</h4>
+                {% if item.section == 'fingerfood' %}
+                  {{ menuItem(item.title,item.price,item.price2,item.desc, item.type, item.section) }}
+                {% endif %}
+              
             {% endfor %}
           {% endif %}
         </div>
