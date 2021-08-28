@@ -308,6 +308,9 @@ form:focus-within {
   background-size: 100% 100%;
 }
 
+.rest-logo {
+  max-height: 35vh;
+}
 
 .rough {
   position: absolute;
