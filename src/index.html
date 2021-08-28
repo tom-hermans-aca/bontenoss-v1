@@ -6,13 +6,14 @@ path: home
 
 <!-- <div class="container flex flex-col items-center justify-center mx-auto lg:h-screen"> -->
 <div
-  class="relative py-8 mx-auto bg-redbrown-600"
+  class="relative py-8 mx-auto bg-redbrown-400"
   style="
-    background-image: url('/static/img/jose-ignacio-pompe-s-Z-h0fEiBM-unsplash.mozjpeg.jpeg');
+    /* background-image: url('/static/img/jose-ignacio-pompe-s-Z-h0fEiBM-unsplash.mozjpeg.jpeg'); */
+    background-image: url('/static/img/dbo_IMG_20210818_211656_edit.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-blend-mode: lighten;
+    background-blend-mode: overlay;
     height: 60vh;
   "
 >
@@ -21,8 +22,8 @@ path: home
       <img
         src="/static/img/denbontenoss_logo_v-2_square_optim.svg"
         alt="den Bonten Oss BBQ Grill restaurant Lommel"
-        class="rest-logo mx-auto w-2/3 md:w-1/3"
-        style="filter: drop-shadow(6px 6px 2px #222)"
+        class="rest-logo mx-auto w-2/3 md:w-1/3 mt-8"
+        style="filter: drop-shadow(3px 3px 2px #222)"
       />
     </a>
     <h1 class="text-right sr-only">
@@ -47,7 +48,9 @@ path: home
 './_includes/partials/welcome.njk' %}
 
 <!-- -->
-<div id="menu">{% include './_includes/partials/tabs.njk' %}</div>
+<div id="menu" class="bg-gray-800 py-8">
+  {% include './_includes/partials/tabs.njk' %}
+</div>
 <!-- -->
 <!-- -->
 {# {% include './_includes/partials/menu.njk' %} #}

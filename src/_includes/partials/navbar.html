@@ -16,8 +16,12 @@
   >
     <!--Logo etc-->
     <div class="flex items-center">
-      <a title="Home" href="/" class="text-lg font-bold text-redbrown-200">
-        DEN BONTEN OSS
+      <a
+        title="Home"
+        href="/"
+        class="text-lg font-script text-redbrown-50 no-underline text-4xl pl-8"
+      >
+        Den Bonten Oss
       </a>
     </div>
 
@@ -30,10 +34,10 @@
         items-center
         px-2
         ml-auto
-        text-gold-400
+        text-redbrown-100
         lg:hidden
-        hover:text-gold-300
-        focus:outline-none focus:text-gold-300
+        hover:text-redbrown-50
+        focus:outline-none focus:text-redbrown-50
       "
       :class="{ 'transition transform-180': isOpen }"
       aria-label="Menu"
@@ -77,11 +81,11 @@
               inline-block
               px-4
               py-2
-              text-gold-400
+              text-redbrown-100
               no-underline
               font-heading
               text-ml
-              hover:text-redbrown-100
+              hover:text-redbrown-50
             "
             href="{{ item.url }}"
             >{{ item.text }}</a
